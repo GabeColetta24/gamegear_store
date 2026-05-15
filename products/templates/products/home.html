@@ -8,4 +8,29 @@
 <!-- Short introduction text for users -->
 <p>Your place for gaming accessories.</p>
 
+<hr>
+
+<!-- Product section -->
+<h2>Products</h2>
+
+<!-- Loop through all products -->
+{% for product in products %}
+
+    <div>
+
+        <!-- Product name -->
+        <h3>{{ product.name }}</h3>
+
+        <!-- Product description -->
+        <p>{{ product.description }}</p>
+
+        <!-- Product price -->
+        <p>£{{ product.price }}</p>
+
+        <hr>
+
+    </div>
+
+{% endfor %}
+
 {% endblock %}
