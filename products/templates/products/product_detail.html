@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Product detail heading -->
+<h1>{{ product.name }}</h1>
+
+<!-- Product information -->
+<p>{{ product.description }}</p>
+
+<!-- Product price -->
+<p>Price: £{{ product.price }}</p>
+
+<!-- Back link to homepage -->
+<a href="{% url 'home' %}">Back to Products</a>
+
+{% endblock %}

@@ -27,9 +27,17 @@
         <!-- Product price -->
         <p>£{{ product.price }}</p>
 
+        <!-- Link to individual product detail page -->
+        <a href="{% url 'product_detail' product.id %}">View Product</a>
+
         <hr>
 
     </div>
+
+    {% empty %}
+
+    <!-- Message shown if no products exist -->
+    <p>No products are currently available.</p>
 
 {% endfor %}
 

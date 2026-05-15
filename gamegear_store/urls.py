@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from products.views import home
+from products.views import home, product_detail
 
 
 # Main project URL patterns
@@ -28,4 +28,7 @@ urlpatterns = [
 
     # Homepage URL
     path('', home, name='home'),
+
+    # Product detail page URL
+    path('products/<int:product_id>/', product_detail, name='product_detail'),
 ]
