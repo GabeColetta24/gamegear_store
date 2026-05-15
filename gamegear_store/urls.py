@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
 from products.views import home, product_detail
 
 
@@ -32,3 +35,7 @@ urlpatterns = [
     # Product detail page URL
     path('products/<int:product_id>/', product_detail, name='product_detail'),
 ]
+
+# Serve media files during development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
