@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+# Homepage view
+# Renders the main homepage template
+def home(request):
+    return render(request, 'products/home.html')

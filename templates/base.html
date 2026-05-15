@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO meta description -->
+    <meta name="description" content="GameGear Store - Buy gaming accessories and equipment online.">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>GameGear Store</title>
+</head>
+<body>
+
+    <!-- Main navigation -->
+    <nav>
+        <a href="/">Home</a>
+
+        <!-- Show different navigation links depending on login state -->
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </nav>
+
+    <hr>
+
+    <!-- Main page content -->
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
