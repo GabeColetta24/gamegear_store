@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Order success heading -->
+<h1>Order Successful</h1>
+
+<!-- Confirmation message -->
+<p>Thank you for your order. Your purchase has been completed successfully.</p>
+
+<!-- Order reference -->
+<p>Order reference: {{ order.id }}</p>
+
+<!-- Order total -->
+<p>Total paid: £{{ order.total }}</p>
+
+<!-- Link back to homepage -->
+<a href="{% url 'home' %}">Continue Shopping</a>
+
+{% endblock %}

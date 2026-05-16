@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from products.models import Product
 from .models import Order, OrderItem
 from .forms import OrderForm
@@ -61,7 +61,7 @@ def checkout(request):
             # Clear cart after successful order
             request.session['cart'] = {}
 
-            return redirect('home')
+            return redirect('order_success', order_id=order.id)
 
     else:
         form = OrderForm()
@@ -73,3 +73,14 @@ def checkout(request):
     }
 
     return render(request, 'checkout/checkout.html', context)
+
+# Order success view
+# Displays confirmation after an order has been placed
+def order_success(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+
+    context = {
+        'order': order,
+    }
+
+    return render(request, 'checkout/order_success.html', context)
