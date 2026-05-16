@@ -37,6 +37,9 @@ urlpatterns = [
 
     # Cart app URLs
     path('cart/', include('cart.urls')),
+
+    # Checkout app URLs
+    path('checkout/', include('checkout.urls')),
 ]
 
 # Serve media files during development
