@@ -34,6 +34,9 @@ urlpatterns = [
 
     # Product detail page URL
     path('products/<int:product_id>/', product_detail, name='product_detail'),
+
+    # Cart app URLs
+    path('cart/', include('cart.urls')),
 ]
 
 # Serve media files during development

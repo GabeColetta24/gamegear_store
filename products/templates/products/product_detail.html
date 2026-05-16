@@ -16,6 +16,9 @@
 <!-- Product price -->
 <p>Price: £{{ product.price }}</p>
 
+<!-- Add to cart button -->
+<a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
+
 <!-- Back link to homepage -->
 <a href="{% url 'home' %}">Back to Products</a>
 

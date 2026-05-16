@@ -20,7 +20,11 @@
 
     <!-- Main navigation -->
     <nav>
+        <!-- Homepage link -->
         <a href="/">Home</a>
+
+        <!-- Shopping cart link -->
+        <a href="{% url 'view_cart' %}">Cart</a>
 
         <!-- Show different navigation links depending on login state -->
         {% if user.is_authenticated %}
