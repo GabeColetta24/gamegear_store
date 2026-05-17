@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import NewsletterSignup
 
-# Register your models here.
+
+# Register newsletter signup model in admin panel
+admin.site.register(NewsletterSignup)

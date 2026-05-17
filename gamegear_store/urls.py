@@ -41,6 +41,9 @@ urlpatterns = [
     # Checkout app URLs
     path('checkout/', include('checkout.urls')),
 
+    # Newsletter app URLs
+    path('newsletter/', include('newsletter.urls')),
+
     # Register URL
     path('register/', register, name='register'),
 ]

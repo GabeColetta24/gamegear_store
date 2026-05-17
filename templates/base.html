@@ -26,6 +26,9 @@
         <!-- Shopping cart link -->
         <a href="{% url 'view_cart' %}">Cart</a>
 
+        <!-- Newsletter signup link -->
+        <a href="{% url 'newsletter_signup' %}">Newsletter</a>
+
         <!-- Show different navigation links depending on login state -->
         {% if user.is_authenticated %}
 

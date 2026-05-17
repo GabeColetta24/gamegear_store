@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Newsletter signup heading -->
+<h1>Newsletter Signup</h1>
+
+<!-- Newsletter signup form -->
+<form method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Subscribe</button>
+
+</form>
+
+{% endblock %}
