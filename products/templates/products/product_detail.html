@@ -3,34 +3,58 @@
 
 {% block content %}
 
-<!-- Product detail heading -->
-<h1>{{ product.name }}</h1>
+<!-- Product detail card -->
+<div class="product-card">
 
-<!-- Product images -->
-<!-- Display keyboard image -->
-{% if product.name == "Gaming Keyboard" %}
-    <img src="{% static 'images/keyboard.jpg' %}" alt="Gaming Keyboard" width="200">
+    <!-- Product name -->
+    <h1>{{ product.name }}</h1>
 
-<!-- Display headset image -->
-{% elif product.name == "Gaming Headset" %}
-    <img src="{% static 'images/headset.jpg' %}" alt="Gaming Headset" width="200">
+    <!-- Product image -->
+    {% if product.name == "Gaming Keyboard" %}
 
-<!-- Display mouse image -->
-{% elif product.name == "Gaming Mouse" %}
-    <img src="{% static 'images/mouse.jpg' %}" alt="Gaming Mouse" width="200">
+        <!-- Display keyboard image -->
+        <img class="product-detail-image"
+             src="{% static 'images/keyboard.jpg' %}"
+             alt="Gaming Keyboard">
 
-{% endif %}
+    {% elif product.name == "Gaming Headset" %}
 
-<!-- Product information -->
-<p>{{ product.description }}</p>
+        <!-- Display headset image -->
+        <img class="product-detail-image"
+             src="{% static 'images/headset.jpg' %}"
+             alt="Gaming Headset">
 
-<!-- Product price -->
-<p>Price: £{{ product.price }}</p>
+    {% elif product.name == "Gaming Mouse" %}
 
-<!-- Add to cart button -->
-<a href="{% url 'add_to_cart' product.id %}">Add to Cart</a>
+        <!-- Display mouse image -->
+        <img class="product-detail-image"
+             src="{% static 'images/mouse.jpg' %}"
+             alt="Gaming Mouse">
 
-<!-- Back link to homepage -->
-<a href="{% url 'home' %}">Back to Products</a>
+    {% endif %}
+
+    <!-- Product description -->
+    <p>{{ product.description }}</p>
+
+    <!-- Product price -->
+    <p><strong>£{{ product.price }}</strong></p>
+
+    <!-- Add to cart form -->
+    <form method="POST" action="{% url 'add_to_cart' product.id %}">
+        {% csrf_token %}
+
+        <button type="submit">
+            Add to Cart
+        </button>
+    </form>
+
+    <!-- Return to homepage button -->
+    <br><br>
+
+    <a class="button" href="{% url 'home' %}">
+        Back to Home
+    </a>
+
+</div>
 
 {% endblock %}

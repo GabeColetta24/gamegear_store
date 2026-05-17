@@ -17,22 +17,26 @@
 <!-- Loop through all products -->
 {% for product in products %}
 
-    <div>
+    <!-- Individual product card -->
+    <div class="product-card">
 
         <!-- Product name -->
-        <h3>{{ product.name }}</h3>
+        <h2>{{ product.name }}</h2>
 
         <!-- Product images -->
-        <!-- Display keyboard image -->
         {% if product.name == "Gaming Keyboard" %}
+
+            <!-- Display keyboard image -->
             <img src="{% static 'images/keyboard.jpg' %}" alt="Gaming Keyboard" width="200">
 
-        <!-- Display headset image -->
         {% elif product.name == "Gaming Headset" %}
+
+            <!-- Display headset image -->
             <img src="{% static 'images/headset.jpg' %}" alt="Gaming Headset" width="200">
 
-        <!-- Display mouse image -->
         {% elif product.name == "Gaming Mouse" %}
+
+            <!-- Display mouse image -->
             <img src="{% static 'images/mouse.jpg' %}" alt="Gaming Mouse" width="200">
 
         {% endif %}
@@ -41,12 +45,12 @@
         <p>{{ product.description }}</p>
 
         <!-- Product price -->
-        <p>£{{ product.price }}</p>
+        <p><strong>£{{ product.price }}</strong></p>
 
-        <!-- Link to individual product detail page -->
-        <a href="{% url 'product_detail' product.id %}">View Product</a>
-
-        <hr>
+        <!-- Link to product detail page -->
+        <a class="button" href="{% url 'product_detail' product.id %}">
+            View Product
+        </a>
 
     </div>
 
