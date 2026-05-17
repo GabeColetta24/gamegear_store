@@ -22,6 +22,11 @@
             <!-- Subtotal -->
             <p>Subtotal: £{{ item.subtotal }}</p>
 
+            <!-- Remove item from cart -->
+            <a class="button" href="{% url 'remove_from_cart' item.product.id %}">
+                Remove
+            </a>
+
             <hr>
 
         </div>

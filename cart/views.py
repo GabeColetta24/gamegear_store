@@ -53,3 +53,18 @@ def add_to_cart(request, product_id):
     request.session['cart'] = cart
 
     return redirect('view_cart')
+
+# Remove product from cart
+def remove_from_cart(request, product_id):
+
+    # Get cart from session
+    cart = request.session.get('cart', {})
+
+    # Remove product if it exists
+    if str(product_id) in cart:
+        del cart[str(product_id)]
+
+    # Save updated cart
+    request.session['cart'] = cart
+
+    return redirect('view_cart')
