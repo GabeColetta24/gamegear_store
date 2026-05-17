@@ -335,3 +335,68 @@ The website was tested on:
 ### Remaining Bugs
 
 No known major bugs remain at the time of submission.
+
+## Deployment
+
+### Local Deployment
+
+To clone this project locally:
+
+1. Open GitHub and locate the repository.
+2. Click the green **Code** button.
+3. Copy the repository URL.
+4. Open a terminal and navigate to the desired folder location.
+5. Run the following command:
+
+```bash
+git clone https://github.com/GabeColetta24/gamegear_store.git
+```
+
+6. Open the project in your chosen code editor.
+7. Create and activate a virtual environment.
+8. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+9. Apply migrations:
+
+```bash
+python manage.py migrate
+```
+
+10. Run the development server:
+
+```bash
+python manage.py runserver
+```
+
+---
+
+### Heroku Deployment
+
+The project was deployed using Heroku.
+
+Steps used for deployment:
+
+1. Create a Heroku account and log in.
+2. Create a new Heroku app.
+3. Add the Heroku Postgres add-on.
+4. Set the required config variables in Heroku:
+   - SECRET_KEY
+   - DATABASE_URL
+   - STRIPE_PUBLIC_KEY
+   - STRIPE_SECRET_KEY
+   - DEBUG
+5. Add `gunicorn`, `psycopg2`, and `whitenoise` to the project requirements.
+6. Create a `Procfile` containing:
+
+```bash
+web: gunicorn gamegear_store.wsgi
+```
+
+7. Push the project to GitHub.
+8. Connect the Heroku app to the GitHub repository.
+9. Deploy the main branch through Heroku.
+10. Open the deployed application to confirm successful deployment.
