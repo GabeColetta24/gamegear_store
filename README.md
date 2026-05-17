@@ -219,6 +219,22 @@ Several additional features could be added in future development updates:
 - Additional gaming products and product images
 
 
+## Marketing Strategy
+
+### Facebook Business Page Mockup
+
+A Facebook business page mockup was created to support the marketing strategy for GameGear Store.
+
+![Facebook Mockup](static/images/facebook-mockup.png)
+
+The Facebook page is designed to:
+- Increase brand awareness
+- Promote gaming products and special offers
+- Drive traffic to the website
+- Engage with potential customers
+- Support long-term customer growth
+
+
 ## Technologies Used
 
 ### Languages
