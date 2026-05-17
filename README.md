@@ -400,3 +400,20 @@ web: gunicorn gamegear_store.wsgi
 8. Connect the Heroku app to the GitHub repository.
 9. Deploy the main branch through Heroku.
 10. Open the deployed application to confirm successful deployment.
+
+
+## Credits
+
+### Media
+
+- Product images were sourced from Google Images and used for educational purposes only.
+
+### Code
+
+- Django documentation was used throughout development:
+  https://docs.djangoproject.com/
+
+- Stripe documentation was used for payment integration:
+  https://stripe.com/docs
+
+- Code Institute learning materials and walkthrough content were used for guidance during development.
