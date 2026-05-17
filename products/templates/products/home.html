@@ -1,3 +1,4 @@
+{% load static %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -21,9 +22,19 @@
         <!-- Product name -->
         <h3>{{ product.name }}</h3>
 
-        <!-- Product image -->
-        {% if product.image %}
-            <img src="{{ product.image.url }}" alt="{{ product.name }}" width="200">
+        <!-- Product images -->
+        <!-- Display keyboard image -->
+        {% if product.name == "Gaming Keyboard" %}
+            <img src="{% static 'images/keyboard.jpg' %}" alt="Gaming Keyboard" width="200">
+
+        <!-- Display headset image -->
+        {% elif product.name == "Gaming Headset" %}
+            <img src="{% static 'images/headset.jpg' %}" alt="Gaming Headset" width="200">
+
+        <!-- Display mouse image -->
+        {% elif product.name == "Gaming Mouse" %}
+            <img src="{% static 'images/mouse.jpg' %}" alt="Gaming Mouse" width="200">
+
         {% endif %}
 
         <!-- Product description -->
