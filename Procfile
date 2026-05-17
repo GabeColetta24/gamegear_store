@@ -1,0 +1,1 @@
+web: gunicorn gamegear_store.wsgi
