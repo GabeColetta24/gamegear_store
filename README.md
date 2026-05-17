@@ -201,3 +201,19 @@ The project includes both a `sitemap.xml` file and a `robots.txt` file to improv
 The website layout adapts to mobile screen sizes to ensure usability across devices.
 
 ![Mobile Responsive Homepage](static/images/mobile-homepage.png)
+
+
+## Future Features
+
+Several additional features could be added in future development updates:
+
+- Product categories and filtering system
+- Product search functionality
+- User profile pages with order history
+- Quantity update buttons directly inside the cart
+- Product stock management system
+- Product reviews and ratings
+- Real Stripe live payment integration
+- Email confirmation for orders and newsletter subscriptions
+- Improved mobile navigation menu
+- Additional gaming products and product images
