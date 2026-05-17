@@ -276,3 +276,62 @@ Manual testing was carried out throughout development to ensure that all feature
 | sitemap.xml | Sitemap loads correctly | Opened sitemap.xml page | Pass |
 | robots.txt | robots.txt loads correctly | Opened robots.txt page | Pass |
 | Mobile responsiveness | Layout adapts to mobile devices | Tested site using Chrome DevTools mobile view | Pass |
+
+---
+
+### Validator Testing
+
+### HTML Validator
+
+HTML pages were tested using the [W3C HTML Validator](https://validator.w3.org/).
+
+No major errors were found during testing.
+
+### CSS Validator
+
+CSS files were tested using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+No errors were found during validation.
+
+### Python Validator
+
+Python files were tested using the [Code Institute Python Linter](https://pep8ci.herokuapp.com/).
+
+No major errors were found. Minor PEP8 warnings relating to line length, spacing, and end-of-file newlines remain in some files but do not affect functionality.
+
+---
+
+### Browser Testing
+
+The website was tested successfully on the following browsers:
+
+- Google Chrome
+- Safari
+
+---
+
+### Device Testing
+
+The website was tested on:
+
+- MacBook Pro
+- Mobile responsive view using Chrome Developer Tools
+
+---
+
+### Fixed Bugs
+
+| Bug | Fix |
+|---|---|
+| Cart page styling did not match the rest of the website | Added consistent styling and reusable card/button classes |
+| Order success page styling was inconsistent | Updated layout and styling to match the website design |
+| Navbar links displayed incorrectly depending on login state | Updated authentication navigation logic |
+| Users could not remove products from the cart | Added remove from cart functionality |
+| Static files were not displaying correctly on deployment | Updated static file and Heroku configuration |
+| Custom 404 page was not displaying correctly | Added and styled a custom 404 template |
+
+---
+
+### Remaining Bugs
+
+No known major bugs remain at the time of submission.
