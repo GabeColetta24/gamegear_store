@@ -246,3 +246,33 @@ Several additional features could be added in future development updates:
 - GitHub
 - Heroku
 - VS Code
+
+
+## Testing
+
+### Manual Testing
+
+Manual testing was carried out throughout development to ensure that all features worked correctly across the website.
+
+| Feature | Expected Outcome | Testing Performed | Result |
+|---|---|---|---|
+| Navigation links | Links navigate to correct pages | Clicked all navigation links across the site | Pass |
+| Homepage products | Products display correctly with images and details | Loaded homepage and checked all product cards | Pass |
+| Product detail pages | Product details display correctly | Opened individual product pages | Pass |
+| Add to cart | Products added to shopping cart | Added multiple products to cart | Pass |
+| Remove from cart | Products removed from shopping cart | Removed products from cart page | Pass |
+| Cart totals | Cart totals calculate correctly | Added and removed products while checking totals | Pass |
+| Checkout form | Users can enter checkout details | Submitted checkout form with test details | Pass |
+| Stripe payments | Test payment processes successfully | Used Stripe test card payment | Pass |
+| Order success page | Confirmation page displays after payment | Completed successful checkout | Pass |
+| User registration | Users can create accounts | Registered new user account | Pass |
+| User login/logout | Users can log in and out successfully | Tested login and logout functionality | Pass |
+| Newsletter signup | Users can subscribe successfully | Submitted newsletter signup form | Pass |
+| Admin panel access | Admin users can access Django admin | Logged into admin panel | Pass |
+| Product management | Products can be managed through admin panel | Added and viewed products in admin | Pass |
+| Order management | Orders display in admin panel | Checked completed orders in admin | Pass |
+| Newsletter management | Newsletter signups display in admin | Checked newsletter signups in admin | Pass |
+| Custom 404 page | Custom error page displays correctly | Visited invalid URL on deployed site | Pass |
+| sitemap.xml | Sitemap loads correctly | Opened sitemap.xml page | Pass |
+| robots.txt | robots.txt loads correctly | Opened robots.txt page | Pass |
+| Mobile responsiveness | Layout adapts to mobile devices | Tested site using Chrome DevTools mobile view | Pass |
