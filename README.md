@@ -217,3 +217,32 @@ Several additional features could be added in future development updates:
 - Email confirmation for orders and newsletter subscriptions
 - Improved mobile navigation menu
 - Additional gaming products and product images
+
+
+## Technologies Used
+
+### Languages
+
+- Python
+- HTML5
+- CSS3
+
+### Frameworks and Libraries
+
+- Django
+- Gunicorn
+- Psycopg2
+- Stripe
+- Whitenoise
+
+### Database
+
+- SQLite (development)
+- PostgreSQL (production via Heroku)
+
+### Deployment
+
+- Git
+- GitHub
+- Heroku
+- VS Code
