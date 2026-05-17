@@ -46,3 +46,8 @@ def register(request):
     }
 
     return render(request, 'products/register.html', context)
+
+# Sitemap view
+# Displays sitemap XML for search engines
+def sitemap(request):
+    return render(request, 'sitemap.xml', content_type='application/xml')

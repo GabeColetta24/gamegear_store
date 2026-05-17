@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from products.views import home, product_detail, register
+from products.views import home, product_detail, register, sitemap
 
 
 # Main project URL patterns
@@ -46,6 +46,9 @@ urlpatterns = [
 
     # Register URL
     path('register/', register, name='register'),
+
+    # Sitemap URL
+    path('sitemap.xml', sitemap, name='sitemap'),
 ]
 
 # Serve media files during development

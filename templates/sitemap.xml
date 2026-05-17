@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>http://127.0.0.1:8000/</loc>
+    </url>
+
+    <!-- Cart page -->
+    <url>
+        <loc>http://127.0.0.1:8000/cart/</loc>
+    </url>
+
+    <!-- Newsletter page -->
+    <url>
+        <loc>http://127.0.0.1:8000/newsletter/</loc>
+    </url>
+
+</urlset>
