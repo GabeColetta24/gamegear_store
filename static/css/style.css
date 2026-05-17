@@ -74,3 +74,13 @@ button {
 button:hover {
     background-color: #1d4ed8;
 }
+
+/* Form styling */
+form p {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+}

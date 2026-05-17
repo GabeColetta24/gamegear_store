@@ -2,18 +2,22 @@
 
 {% block content %}
 
-<!-- Register page heading -->
-<h1>Register</h1>
+<div class="product-card">
 
-<!-- User registration form -->
-<form method="POST">
+    <!-- Register page heading -->
+    <h1>Register</h1>
 
-    {% csrf_token %}
+    <!-- User registration form -->
+    <form method="POST">
 
-    {{ form.as_p }}
+        {% csrf_token %}
 
-    <button type="submit">Register</button>
+        {{ form.as_p }}
 
-</form>
+        <button type="submit" class="button">Register</button>
+
+    </form>
+
+</div>
 
 {% endblock %}

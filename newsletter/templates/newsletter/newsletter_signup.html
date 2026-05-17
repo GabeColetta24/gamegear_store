@@ -2,18 +2,21 @@
 
 {% block content %}
 
-<!-- Newsletter signup heading -->
-<h1>Newsletter Signup</h1>
+<div class="product-card">
 
-<!-- Newsletter signup form -->
-<form method="POST">
+    <!-- Page heading -->
+    <h1>Newsletter Signup</h1>
 
-    {% csrf_token %}
+    <!-- Newsletter signup form -->
+    <form method="POST">
+        {% csrf_token %}
 
-    {{ form.as_p }}
+        {{ form.as_p }}
 
-    <button type="submit">Subscribe</button>
+        <!-- Submit button -->
+        <button type="submit" class="button">Subscribe</button>
+    </form>
 
-</form>
+</div>
 
 {% endblock %}
