@@ -60,6 +60,20 @@ The layout uses a centered main content area with card-style sections. Product l
 The site was designed to remain usable on both desktop and mobile screen sizes. The main content area adapts to smaller screens, and the navigation links remain accessible. Product cards stack vertically, making the site easy to browse on mobile devices.
 
 
+## Agile Development
+
+GitHub Projects was used to manage the planning and development process for the GameGear Store application.
+
+User stories were organised into:
+- To Do
+- In Progress
+- Done
+
+The board was used to track completed functionality and future improvements throughout development.
+
+![Agile Board](static/images/agile-board.png)
+
+
 ## Features
 
 ### Navigation Bar
