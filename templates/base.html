@@ -28,9 +28,18 @@
 
         <!-- Show different navigation links depending on login state -->
         {% if user.is_authenticated %}
+
+            <!-- Logout link shown to logged-in users -->
             <a href="{% url 'logout' %}">Logout</a>
+
         {% else %}
+
+            <!-- Login link shown to logged-out users -->
             <a href="{% url 'login' %}">Login</a>
+
+            <!-- Register link shown to logged-out users -->
+            <a href="{% url 'register' %}">Register</a>
+
         {% endif %}
     </nav>
 

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Register page heading -->
+<h1>Register</h1>
+
+<!-- User registration form -->
+<form method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Register</button>
+
+</form>
+
+{% endblock %}

@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from products.views import home, product_detail
+from products.views import home, product_detail, register
 
 
 # Main project URL patterns
@@ -40,6 +40,9 @@ urlpatterns = [
 
     # Checkout app URLs
     path('checkout/', include('checkout.urls')),
+
+    # Register URL
+    path('register/', register, name='register'),
 ]
 
 # Serve media files during development
