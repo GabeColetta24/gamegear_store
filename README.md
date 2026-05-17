@@ -58,3 +58,146 @@ The layout uses a centered main content area with card-style sections. Product l
 ### Responsive Design
 
 The site was designed to remain usable on both desktop and mobile screen sizes. The main content area adapts to smaller screens, and the navigation links remain accessible. Product cards stack vertically, making the site easy to browse on mobile devices.
+
+
+## Features
+
+### Navigation Bar
+
+The navigation bar is displayed across all pages of the website and allows users to easily navigate between the homepage, shopping cart, newsletter signup page, login page, and registration page.
+
+Users who are logged in are shown a logout link, while logged out users are shown login and register links.
+
+#### Logged Out Navigation
+
+![Logged Out Navigation](static/images/login-navbar.png)
+
+#### Logged In Navigation
+
+![Logged In Navigation](static/images/logout-navbar.png)
+
+---
+
+### Homepage
+
+The homepage displays all available gaming products using styled product cards. Each product includes an image, description, price, and a link to view more details.
+
+![Homepage](static/images/homepage.png)
+
+---
+
+### Product Detail Pages
+
+Each product has its own detail page containing a larger image, product description, price, add to cart button, and a link back to the homepage.
+
+![Product Detail Page](static/images/product-detail.png)
+
+---
+
+### Shopping Cart
+
+Users can add products to their cart, view selected items, see totals, remove products from the cart, and continue to checkout.
+
+![Cart Page](static/images/cart.png)
+
+---
+
+### Checkout System
+
+The checkout page allows users to enter their details and review their order before completing payment.
+
+![Checkout Page](static/images/checkout.png)
+
+---
+
+### Stripe Payments
+
+Stripe test payments were integrated to simulate a real e-commerce checkout experience.
+
+![Stripe Payment](static/images/stripe-payment.png)
+
+---
+
+### Order Success Page
+
+After a successful payment, users are redirected to an order confirmation page displaying their order details and confirmation message.
+
+![Order Success Page](static/images/order-success.png)
+
+---
+
+### User Authentication
+
+Users can register for an account, log in, and log out securely using Django authentication.
+
+#### Register Page
+
+![Register Page](static/images/register-page.png)
+
+#### Login Page
+
+![Login Page](static/images/login-page.png)
+
+---
+
+### Newsletter Signup
+
+Users can subscribe to the newsletter using a simple signup form. Newsletter signups are stored and manageable through the Django admin panel.
+
+![Newsletter Signup](static/images/newsletter-page.png)
+
+---
+
+### Django Admin Panel
+
+The Django admin panel allows administrators to manage products, customer orders, order items, newsletter signups, and registered users through the built-in Django administration system.
+
+#### Admin Dashboard
+
+![Admin Dashboard](static/images/admin-panel.png)
+
+#### Product Management
+
+![Admin Products](static/images/admin-products.png)
+
+#### Order Management
+
+![Admin Orders](static/images/admin-order.png)
+
+#### Order Item Management
+
+![Admin Order Items](static/images/admin-order-items.png)
+
+#### Newsletter Management
+
+![Admin Newsletter](static/images/admin-newsletter.png)
+
+---
+
+### Custom 404 Page
+
+A custom 404 page was created to improve user experience when visiting invalid URLs.
+
+![404 Page](static/images/custom-404.png)
+
+---
+
+### SEO Features
+
+The project includes both a `sitemap.xml` file and a `robots.txt` file to improve search engine indexing and SEO structure.
+
+#### sitemap.xml
+
+![Sitemap](static/images/sitemap.png)
+
+#### robots.txt
+
+![Robots](static/images/robots.png)
+
+---
+
+### Responsive Design
+
+The website layout adapts to mobile screen sizes to ensure usability across devices.
+
+![Mobile Responsive Homepage](static/images/mobile-homepage.png)
