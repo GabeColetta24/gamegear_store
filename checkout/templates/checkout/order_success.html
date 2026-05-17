@@ -2,19 +2,23 @@
 
 {% block content %}
 
-<!-- Order success heading -->
-<h1>Order Successful</h1>
+<div class="product-card">
 
-<!-- Confirmation message -->
-<p>Thank you for your order. Your purchase has been completed successfully.</p>
+    <!-- Order success heading -->
+    <h1>Order Successful</h1>
 
-<!-- Order reference -->
-<p>Order reference: {{ order.id }}</p>
+    <!-- Confirmation message -->
+    <p>Thank you for your order. Your purchase has been completed successfully.</p>
 
-<!-- Order total -->
-<p>Total paid: £{{ order.total }}</p>
+    <!-- Order reference -->
+    <p>Order reference: {{ order.id }}</p>
 
-<!-- Link back to homepage -->
-<a href="{% url 'home' %}">Continue Shopping</a>
+    <!-- Order total -->
+    <p>Total paid: £{{ order.total }}</p>
+
+    <!-- Link back to homepage -->
+    <a class="button" href="{% url 'home' %}">Continue Shopping</a>
+
+</div>
 
 {% endblock %}

@@ -11,7 +11,7 @@
     <!-- Loop through cart items -->
     {% for item in cart_items %}
 
-        <div>
+        <div class="product-card">
 
             <!-- Product name -->
             <h3>{{ item.product.name }}</h3>
@@ -32,7 +32,7 @@
     <h2>Total: £{{ total }}</h2>
 
     <!-- Checkout button -->
-    <a href="{% url 'checkout' %}">Proceed to Checkout</a>
+    <a class="button" href="{% url 'checkout' %}">Proceed to Checkout</a>
 
 {% else %}
 
