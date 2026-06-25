@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Review form card -->
+<div class="product-card">
+
+    <!-- Review form heading -->
+    <h1>Review {{ product.name }}</h1>
+
+    <!-- Review form -->
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="button">Save Review</button>
+    </form>
+
+    <br>
+
+    <!-- Back to product page -->
+    <a class="button" href="{% url 'product_detail' product.id %}">
+        Back to Product
+    </a>
+
+</div>
+
+{% endblock %}
