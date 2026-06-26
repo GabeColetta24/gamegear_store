@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Wishlist page card -->
+<div class="product-card">
+
+    <!-- Wishlist heading -->
+    <h1>My Wishlist</h1>
+
+    <!-- Check if user has wishlist items -->
+    {% if wishlist_items %}
+
+        <!-- Display wishlist items -->
+        {% for item in wishlist_items %}
+
+            <div class="product-card">
+
+                <!-- Product name -->
+                <h2>{{ item.product.name }}</h2>
+
+                <!-- Product description -->
+                <p>{{ item.product.description }}</p>
+
+                <!-- Product price -->
+                <p><strong>£{{ item.product.price }}</strong></p>
+
+                <!-- Link to product detail page -->
+                <a class="button" href="{% url 'product_detail' item.product.id %}">
+                    View Product
+                </a>
+
+                <!-- Remove from wishlist button -->
+                <a class="button" href="{% url 'remove_from_wishlist' item.id %}">
+                    Remove
+                </a>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <!-- Message shown if wishlist is empty -->
+        <p>Your wishlist is currently empty.</p>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -48,6 +48,23 @@
         </button>
     </form>
 
+    <br>
+
+    <!-- Wishlist button -->
+    {% if user.is_authenticated %}
+
+    <a class="button" href="{% url 'add_to_wishlist' product.id %}">
+        Add to Wishlist
+    </a>
+
+    {% else %}
+
+    <p>
+        <a href="{% url 'login' %}">Log in</a> to save this product to your wishlist.
+    </p>
+
+    {% endif %}
+
     <!-- Return to homepage button -->
     <br><br>
 

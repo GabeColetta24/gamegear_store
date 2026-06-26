@@ -44,6 +44,9 @@ urlpatterns = [
     # Review app URLs
     path('reviews/', include('reviews.urls')),
 
+    # Wishlist app URLs
+    path('wishlist/', include('wishlist.urls')),
+
     # Newsletter app URLs
     path('newsletter/', include('newsletter.urls')),
 
