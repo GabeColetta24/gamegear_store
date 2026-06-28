@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO meta description -->
-    <meta name="description" content="GameGear Store - Buy gaming accessories and equipment online.">
+    <meta name="description" content="GameGear Store is an online gaming accessories store where users can browse products, add items to a cart, save products to a wishlist, leave reviews and securely purchase items using Stripe.">
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -34,6 +34,11 @@
 
         <!-- Show different navigation links depending on login state -->
         {% if user.is_authenticated %}
+
+            <!-- Display logged-in user -->
+            <span style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">
+                Logged in as {{ user.username }}
+            </span>
 
             <!-- Logout link shown to logged-in users -->
             <a href="{% url 'logout' %}">Logout</a>

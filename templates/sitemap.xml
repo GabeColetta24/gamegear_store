@@ -4,17 +4,32 @@
 
     <!-- Homepage -->
     <url>
-        <loc>http://127.0.0.1:8000/</loc>
+        <loc>https://gamegear-store-gabe-abcc86b4605d.herokuapp.com/</loc>
+    </url>
+
+    <!-- Register -->
+    <url>
+        <loc>https://gamegear-store-gabe-abcc86b4605d.herokuapp.com/register/</loc>
+    </url>
+
+    <!-- Login -->
+    <url>
+        <loc>https://gamegear-store-gabe-abcc86b4605d.herokuapp.com/accounts/login/</loc>
     </url>
 
     <!-- Cart page -->
     <url>
-        <loc>http://127.0.0.1:8000/cart/</loc>
+        <loc>https://gamegear-store-gabe-abcc86b4605d.herokuapp.com/cart/</loc>
+    </url>
+
+    <!-- Wishlist -->
+    <url>
+        <loc>https://gamegear-store-gabe-abcc86b4605d.herokuapp.com/wishlist/</loc>
     </url>
 
     <!-- Newsletter page -->
     <url>
-        <loc>http://127.0.0.1:8000/newsletter/</loc>
+        <loc>https://gamegear-store-gabe-abcc86b4605d.herokuapp.com/newsletter/</loc>
     </url>
 
 </urlset>

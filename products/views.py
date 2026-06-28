@@ -31,6 +31,10 @@ def product_detail(request, product_id):
 # Allows new users to create an account
 def register(request):
 
+    # Redirect logged-in users away from the registration page
+    if request.user.is_authenticated:
+        return redirect('home')
+
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
 
