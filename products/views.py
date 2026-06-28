@@ -55,3 +55,8 @@ def register(request):
 # Displays sitemap XML for search engines
 def sitemap(request):
     return render(request, 'sitemap.xml', content_type='application/xml')
+
+# Robots view
+# Displays robots.txt for search engine crawlers
+def robots_txt(request):
+    return render(request, 'robots.txt', content_type='text/plain')
