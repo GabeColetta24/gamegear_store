@@ -209,6 +209,20 @@ The Django admin panel allows administrators to manage products, customer orders
 
 ![Admin Newsletter](static/images/admin-newsletter.png)
 
+#### Review Management
+
+Administrators can view and manage all product reviews through the Django admin panel.
+
+![Admin Reviews](static/images/admin-reviews.png)
+
+---
+
+#### Wishlist Management
+
+Administrators can view wishlist entries created by registered users through the Django admin panel.
+
+![Admin Wishlist](static/images/admin-wishlist.png)
+
 ---
 
 ### Custom 404 Page
