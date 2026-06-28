@@ -19,6 +19,9 @@ The site includes features such as:
 - SEO features including sitemap.xml and robots.txt
 - Custom 404 error page
 - Responsive design for mobile and desktop devices
+- Product review functionality with create, read, update and delete options
+- Wishlist functionality for logged-in users
+- Logged-in user status shown in the navigation bar
 
 ### Live Website
 
@@ -154,6 +157,26 @@ Users can register for an account, log in, and log out securely using Django aut
 
 ---
 
+### Product Reviews
+
+Logged-in users can leave reviews on products by providing a rating and written feedback. Reviews are displayed on the relevant product page so that other customers can read them before making a purchase.
+
+Users can also edit or delete their own reviews, providing full frontend CRUD (Create, Read, Update and Delete) functionality while preventing users from modifying reviews created by others.
+
+![Product Reviews](static/images/product-reviews.png)
+
+---
+
+### Wishlist
+
+Registered users can save products to a personal wishlist for future viewing. This provides users with a convenient way to keep track of products they are interested in purchasing.
+
+Products can be added directly from the product detail page and removed from the wishlist at any time. Wishlist functionality is only available to authenticated users, providing an additional benefit for creating an account.
+
+![Wishlist](static/images/wishlist.png)
+
+---
+
 ### Newsletter Signup
 
 Users can subscribe to the newsletter using a simple signup form. Newsletter signups are stored and manageable through the Django admin panel.
@@ -226,7 +249,6 @@ Several additional features could be added in future development updates:
 - User profile pages with order history
 - Quantity update buttons directly inside the cart
 - Product stock management system
-- Product reviews and ratings
 - Real Stripe live payment integration
 - Email confirmation for orders and newsletter subscriptions
 - Improved mobile navigation menu
@@ -248,6 +270,40 @@ The Facebook page is designed to:
 - Engage with potential customers
 - Support long-term customer growth
 
+
+## E-commerce Business Model
+
+GameGear Store follows a **Business-to-Consumer (B2C)** e-commerce model. The website is designed to allow customers to browse gaming accessories, add products to a shopping cart, and complete purchases through a secure Stripe payment system.
+
+The application demonstrates the key functionality expected from a modern e-commerce website by allowing users to:
+
+- Browse available products.
+- View detailed product information.
+- Add products to a shopping cart.
+- Complete secure online payments using Stripe.
+- Register and log into an account.
+- Save products to a personal wishlist.
+- Create, edit and delete product reviews.
+
+The site owner manages products, customer orders, newsletter subscriptions, reviews, and wishlist data through the Django administration panel. This allows products and customer data to be managed efficiently while providing customers with a simple and user-friendly shopping experience.
+
+## Database Schema
+
+The GameGear Store application uses a relational database to manage products, customer orders, reviews, wishlist items, newsletter subscriptions, and user accounts.
+
+The main database models are:
+
+- **Product** – Stores product information including name, description, price, image, and availability.
+- **Order** – Stores customer order details including delivery information and total cost.
+- **OrderItem** – Stores individual products that belong to an order.
+- **Review** – Stores product reviews created by registered users.
+- **WishlistItem** – Stores products saved to a user's wishlist.
+- **NewsletterSignup** – Stores email addresses submitted through the newsletter signup form.
+- **User** – Django's built-in authentication model used to manage user accounts and link orders, reviews, and wishlist items.
+
+The Entity Relationship Diagram (ERD) below illustrates the relationships between the application's database models.
+
+![Entity Relationship Diagram](static/images/erd.png)
 
 ## Technologies Used
 
@@ -306,6 +362,12 @@ Manual testing was carried out throughout development to ensure that all feature
 | sitemap.xml | Sitemap loads correctly | Opened sitemap.xml page | Pass |
 | robots.txt | robots.txt loads correctly | Opened robots.txt page | Pass |
 | Mobile responsiveness | Layout adapts to mobile devices | Tested site using Chrome DevTools mobile view | Pass |
+| Product reviews | Logged-in users can create reviews | Created a review on a product page | Pass |
+| Edit review | Users can edit their own reviews | Edited an existing review | Pass |
+| Delete review | Users can delete their own reviews | Deleted an existing review | Pass |
+| Add to wishlist | Logged-in users can save products | Added a product to the wishlist | Pass |
+| Remove from wishlist | Users can remove saved products | Removed a product from the wishlist | Pass |
+| Logged-in user display | Username displays correctly in the navigation bar | Logged in and confirmed username appeared in the navigation bar | Pass |
 
 ---
 
@@ -327,7 +389,7 @@ No errors were found during validation.
 
 Python files were tested using the [Code Institute Python Linter](https://pep8ci.herokuapp.com/).
 
-No major errors were found. Minor PEP8 warnings relating to line length, spacing, and end-of-file newlines remain in some files but do not affect functionality.
+No functional errors were found. Any remaining warnings relate to code style, such as line length or formatting, and do not affect the operation of the application.
 
 ---
 
@@ -345,6 +407,7 @@ The website was tested successfully on the following browsers:
 The website was tested on:
 
 - MacBook Pro
+- iPhone
 - Mobile responsive view using Chrome Developer Tools
 
 ---
@@ -359,6 +422,11 @@ The website was tested on:
 | Users could not remove products from the cart | Added remove from cart functionality |
 | Static files were not displaying correctly on deployment | Updated static file and Heroku configuration |
 | Custom 404 page was not displaying correctly | Added and styled a custom 404 template |
+| Product reviews were not available | Added full frontend CRUD functionality for authenticated users to create, edit and delete product reviews |
+| Wishlist functionality was missing | Implemented a wishlist system allowing authenticated users to save and remove products |
+| Search engine optimisation was incomplete | Added a sitemap, robots.txt and improved meta descriptions |
+| Logged-in users had no visual account indicator | Added the logged-in username to the navigation bar |
+| Logged-in users could access the registration page | Redirected authenticated users away from the registration page |
 
 ---
 
@@ -440,7 +508,7 @@ web: gunicorn gamegear_store.wsgi
 
 ### Code
 
-- Django documentation was used throughout development:
+- Django documentation was used throughout development, including authentication, models, forms and views:
   https://docs.djangoproject.com/
 
 - Stripe documentation was used for payment integration:
